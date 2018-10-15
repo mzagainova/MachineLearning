@@ -1,9 +1,9 @@
 import numpy as np
 
-X = np.array([[-2,1],[1,1],[1.5,-0.5],[-2,-1],[-1,-1.5],[2,-2]])
+#X = np.array([[-2,1],[1,1],[1.5,-0.5],[-2,-1],[-1,-1.5],[2,-2]])
 #X = np.array([[0,1],[1,0],[5,4],[1,1],[3,3],[2,4],[1,6]])
 #Y = np.array([[1],[1],[-1],[1],[-1],[-1],[-1]])
-Y = np.array([[1],[1],[1],[-1],[-1],[-1]])
+#Y = np.array([[1],[1],[1],[-1],[-1],[-1]])
 
 def update(W,X,Y,b,sample):
     for feat in range(X.shape[1]):
@@ -47,8 +47,3 @@ def perceptron_test(X_test,Y_test,W,b):
             if Y_test[sample] == -1:
                 correct += 1
     return float(correct) / float(Y_test.shape[0])
-
-answer = perceptron_train(X,Y)
-print answer[0]
-print answer[1]
-print perceptron_test(X,Y,answer[0],answer[1])
