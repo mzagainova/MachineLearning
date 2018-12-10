@@ -58,8 +58,8 @@ def calculate_loss(model, X, y):
 def predict(model, x):
     params = calc_model(model, x)
     y_hat = params['y_hat']
-    print y_hat
-    print "Y HAT: ", np.argmax(y_hat, axis=1)
+    #print y_hat
+    #print "Y HAT: ", np.argmax(y_hat, axis=1)
     return np.argmax(y_hat, axis=1)
 
 def calc_grads(model, model_params, y, x):
